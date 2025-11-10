@@ -6,3 +6,8 @@ export const selectCurrentStatus = createSelector(
   [selectFiltersReducer],
   (filters) => filters.status
 );
+
+export const selectCurrentPriority = createSelector(
+  [selectFiltersReducer],
+  (filters) => filters.priority
+);

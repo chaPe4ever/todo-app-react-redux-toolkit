@@ -4,7 +4,7 @@ import { fetchTodos } from '../../utils/api';
 import { useDispatch } from 'react-redux';
 import { setTodos } from '../../store/todos/todos.reducer';
 import AddTodo from '../AddTodo/AddTodo';
-import TodoFilters from '../TodoFilters/TodoFilters';
+import TodoFilters from '../FiltersBar/FiltersBar';
 
 const HomePage = () => {
   const dispatch = useDispatch();
