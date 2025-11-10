@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setTodos } from '../../store/todos/todos.reducer';
 import AddTodo from '../AddTodo/AddTodo';
 import TodoFilters from '../FiltersBar/FiltersBar';
+import SearchBar from '../SearchBar/SearchBar';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const HomePage = () => {
   return (
     <main>
       <h1>Today's TODO list</h1>
+      <SearchBar />
       <AddTodo />
       <TodoFilters />
       <TodoList />

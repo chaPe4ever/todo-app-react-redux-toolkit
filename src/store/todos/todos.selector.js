@@ -21,6 +21,13 @@ export const selectFilteredTodos = createSelector(
         return false;
       }
 
+      // Filter by seatch query
+      if (
+        filters.searchQuery &&
+        !todo.text.toLowerCase().includes(filters.searchQuery.toLowerCase())
+      ) {
+        return false;
+      }
       return true;
     })
 );
