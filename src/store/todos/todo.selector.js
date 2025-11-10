@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectTodoReducer = (state) => state.todo;
+const selectTodosReducer = (state) => state.todos;
 
 export const selectTodoItems = createSelector(
-  [selectTodoReducer],
-  (todo) => todo.todoItems
+  [selectTodosReducer],
+  (todos) => todos.todos
 );
