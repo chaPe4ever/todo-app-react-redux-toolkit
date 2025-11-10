@@ -28,8 +28,8 @@ const TodoFilters = () => {
   }
 
   return (
-    <div className="my-2 flex w-full flex-col items-start">
-      <h2>Filtering</h2>
+    <section className="my-2 flex w-full flex-col items-start">
+      <h2>Filtering Section</h2>
       <div className="flex w-full flex-col gap-2">
         <FilterItem
           title="Status"
@@ -44,7 +44,7 @@ const TodoFilters = () => {
           onInputChangeHandler={priorityFilterChangeHandler}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

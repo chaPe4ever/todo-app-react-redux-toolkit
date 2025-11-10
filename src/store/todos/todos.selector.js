@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { STATUS } from '../../utils/types';
+import { PRIORITY, STATUS } from '../../utils/types';
 
 const selectTodosReducer = (state) => state.todos;
 const selectFiltersReducer = (state) => state.filters;
@@ -15,6 +15,12 @@ export const selectFilteredTodos = createSelector(
       if (filters.status === STATUS.UNCOMPLETED && todo.isCompleted) {
         return false;
       }
+
+      // Filter by prio
+      if (filters.priority && todo.priority !== filters.priority) {
+        return false;
+      }
+
       return true;
     })
 );
