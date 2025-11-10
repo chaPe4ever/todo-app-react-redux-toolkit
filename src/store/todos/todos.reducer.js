@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { v4 as uid } from 'uuid';
 
 const INITIAL_STATE = {
   todos: [],

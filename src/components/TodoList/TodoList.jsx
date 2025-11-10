@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTodoItems } from '../../store/todos/todos.selector';
+import { selectFilteredTodos } from '../../store/todos/todos.selector';
 import { toggleTodo, removeTodo } from '../../store/todos/todos.reducer';
 import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = () => {
-  const todoItems = useSelector(selectTodoItems);
+  const todoItems = useSelector(selectFilteredTodos);
   const dispatch = useDispatch();
 
   function toggleTodoItemHandler(todo) {
