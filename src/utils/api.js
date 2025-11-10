@@ -6,6 +6,6 @@ export const fetchTodos = async () => {
 const fakeTodos = [
   ...Array.from({ length: 3 }, (_, i) => ({
     id: i + 1,
-    content: `Todo ${i + 1}`,
+    text: `Todo ${i + 1}`,
   })),
 ];

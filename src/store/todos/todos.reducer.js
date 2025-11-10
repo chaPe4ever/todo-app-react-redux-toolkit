@@ -27,7 +27,7 @@ const removeTodoItem = (todos, todoToRemove) => {
 };
 
 const addTodoItem = (todos, todoToAdd) => {
-  return [...todos, { ...todoToAdd, id: uid(), isCommpleted: false }];
+  return [...todos, todoToAdd];
 };
 
 const toggleTodoItem = (todos, todoToToggle) => {
@@ -57,6 +57,6 @@ export const todosSlice = createSlice({
   },
 });
 
-export const { setTodos, toggleTodo, removeTodo } = todosSlice.actions;
+export const { setTodos, addTodo, toggleTodo, removeTodo } = todosSlice.actions;
 
 export const todosReducer = todosSlice.reducer;

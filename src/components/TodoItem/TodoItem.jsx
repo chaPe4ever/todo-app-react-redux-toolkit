@@ -2,7 +2,7 @@ import { X } from 'lucide-react';
 import { cn } from '../../utils/utils';
 
 const TodoItem = ({ todo, removeTodoItemHandler, className, ...rest }) => {
-  const { content, isCompleted } = todo;
+  const { text, isCompleted } = todo;
   return (
     <li
       className={cn(
@@ -13,7 +13,7 @@ const TodoItem = ({ todo, removeTodoItemHandler, className, ...rest }) => {
       {...rest}
     >
       <div className={cn('flex-1', isCompleted ? 'line-through' : '')}>
-        {content}
+        {text}
       </div>
       <button
         className="rounded-xl border-2 border-amber-500 p-1.5 md:cursor-pointer"
