@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import TodoList from '../TodoList/TodoList';
 import { fetchTodos } from '../../utils/api';
 import { useDispatch } from 'react-redux';
-import { setTodos } from '../../store/todos/todo.reducer';
+import { setTodos } from '../../store/todos/todos.reducer';
 
 const HomePage = () => {
   const dispatch = useDispatch();
