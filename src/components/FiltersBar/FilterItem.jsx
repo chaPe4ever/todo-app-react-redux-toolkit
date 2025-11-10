@@ -6,7 +6,7 @@ const FilterItem = ({
 }) => {
   return (
     <div className="flex flex-col items-start gap-2">
-      <h3>{title}</h3>
+      <h3 className="font-bold">{title}</h3>
       <div className="flex w-full justify-between gap-2">
         {Object.entries(filterEnumObj).map(([key, value]) => (
           <label key={key} className="w-full cursor-pointer">

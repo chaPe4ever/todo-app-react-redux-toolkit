@@ -35,11 +35,12 @@ const AddTodo = () => {
   }
 
   return (
-    <div>
+    <div className="flex flex-col gap-2 rounded-xl border-2 border-amber-500 p-2">
+      <h3 className="text-xl font-bold">Create Todo Section</h3>
       {/* Todo item section */}
       <section className="flex gap-2">
         <input
-          className="flex-1 rounded-xl border-2 p-2"
+          className="flex-1 rounded-xl border-2 border-amber-500 p-2 md:cursor-pointer"
           placeholder="Your next todo"
           name="text"
           value={todoText}
@@ -54,11 +55,12 @@ const AddTodo = () => {
         </button>
       </section>
       {/* Todo option setup section */}
-      <section className="my-2 flex gap-2">
-        <h3>Priority</h3>
+      <section className="my-2 flex items-baseline justify-start gap-2">
+        <h3 className="font-bold">Priority</h3>
         <select
           onChange={onChangeHandler}
           name="priority"
+          className="cursor-pointer appearance-none rounded-xl border-2 border-amber-500 bg-transparent px-2 py-1"
           defaultValue={PRIORITY.MEDIUM}
         >
           {Object.entries(PRIORITY).map(([key, value]) => {

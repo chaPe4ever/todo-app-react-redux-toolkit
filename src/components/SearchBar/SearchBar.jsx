@@ -18,9 +18,9 @@ const SearchBar = () => {
     <div>
       <input
         value={inputValue}
+        className="mt-5 mb-2 w-1/3 rounded-xl border-2 border-amber-500 p-2 pr-20 md:cursor-pointer"
         onChange={(e) => setInputValue(e.target.value)}
-        className="my-2 rounded-xl border-2 p-2 pr-20"
-        placeholder="Search..."
+        placeholder="Search todos..."
       />
     </div>
   );

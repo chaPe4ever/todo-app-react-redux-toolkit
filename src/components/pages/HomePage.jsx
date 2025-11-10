@@ -17,9 +17,8 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <main>
-      <h1>Today's TODO list</h1>
-      <SearchBar />
+    <main className="m-5 flex flex-col gap-5">
+      <h1 className="mb-5 text-4xl font-extrabold">Today's TODO list</h1>
       <AddTodo />
       <TodoFilters />
       <TodoList />

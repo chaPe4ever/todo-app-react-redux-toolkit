@@ -6,9 +6,10 @@ export const fetchTodos = async () => {
 };
 
 const fakeTodos = [
-  ...Array.from({ length: 3 }, (_, i) =>
+  ...Array.from({ length: 7 }, (_, i) =>
     Todo({
       text: `Todo ${i + 1}`,
+      priority: ['Low', 'Medium', 'High'][Math.floor(Math.random() * 3)],
     })
   ),
 ];

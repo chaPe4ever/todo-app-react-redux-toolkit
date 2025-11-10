@@ -9,6 +9,7 @@ import {
   selectCurrentStatus,
 } from '../../store/filters/filters.selector';
 import FilterItem from './FilterItem';
+import SearchBar from '../SearchBar/SearchBar';
 
 const TodoFilters = () => {
   const dispatch = useDispatch();
@@ -28,9 +29,9 @@ const TodoFilters = () => {
   }
 
   return (
-    <section className="my-2 flex w-full flex-col items-start">
-      <h2>Filtering Section</h2>
-      <div className="flex w-full flex-col gap-2">
+    <section className="my-2 flex flex-col gap-2 rounded-xl border-2 border-amber-500 p-2">
+      <h2 className="text-xl font-bold">Filtering Section</h2>
+      <div className="flex flex-col gap-2">
         <FilterItem
           title="Status"
           currentValue={currentStatusValue}
@@ -43,6 +44,7 @@ const TodoFilters = () => {
           filterEnumObj={PRIORITY}
           onInputChangeHandler={priorityFilterChangeHandler}
         />
+        <SearchBar />
       </div>
     </section>
   );
